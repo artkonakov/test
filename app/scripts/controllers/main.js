@@ -24,6 +24,5 @@ angular.module('cupon2App')
            };
            $http(req).success(function (data) {
              console.log(data);
-             console.log('git');
            });
   }]);
