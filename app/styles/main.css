@@ -1,0 +1,68 @@
+body {
+    background: #f5f5fa;
+}
+.main-item {
+    height: auto;
+    background: #fff;
+    margin-bottom: 30px;
+}
+.main-item img {
+    width: 100%;
+    height: auto;
+}
+.main-item .text-wraper {
+    padding: 0 20px 0px 20px;
+}
+.main-item h1 {
+    font-size: 19px;
+    line-height: 24px;
+}
+.main-item p {
+    font-size: 15px;
+    line-height: 21px;
+    color: #666;
+}
+.controls {
+    margin-top: 20px;
+    padding: 0px 20px 10px 20px;
+}
+.controls .left-block {
+    display: inline-block;
+}
+.controls .left-block p {
+    margin-top: 4px;
+}
+.controls .right-block {
+    display: inline-block;
+    float: right;
+}
+.btn-success {
+    background: #6acc39;
+}
+.item-form {
+    background: #fffac1;
+    margin-bottom: 30px;
+    padding: 25px;
+}
+.item-full-info {
+    height: auto;
+    background: #fff;
+    margin-bottom: 30px;
+}
+.item-full-wraper {
+    padding: 20px;
+}
+.item-full-wraper h1 {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 0px;
+    padding-top: 20px;
+    margin-bottom:
+}
+.company-name {
+    border-bottom: 1px solid #ddd;
+}
+br {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+        <div class="main-item">
+            <img ng-src="{{item.image}}">
+            <div class="text-wraper">
+                <h1>{{item.header}}</h1>
+                <p>{{item.description}}</p>
+            </div>
+            <div class="controls">
+                <div class="left-block">
+                    <p>{{item.date}}</p>
+                </div>
+                <div class="right-block">
+
+                </div>
+            </div>
+            <div class="item-form">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Номер телефона</label>
+                        <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="891295123456" ng-model="usertel" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-success" ng-click="send(usertel)">Получить купон</button>
+                </form>
+               
+            </div>
+        </div>
+
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">
+        <div class="item-full-info">
+            <div class="item-full-wraper">
+                <div class="company-name">
+                    <h1>Клуб «Боулинг Измайлово»</h1>
+                    
+                </div>
+                <div class="company-contacts">
+                    <h1>Контактная информация</h1>
+                    <div class="contacts-controls">
+                        <div class="left-block">
+                            <a href="tel">+7 495 737-66-97</a>
+                        </div>
+                        <div class="right-block">
+                            <p>Измайловское ш., д. 71, корп. 4Г-Д</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="company-conditions">
+                    <p>Воспользоваться взятым купоном можно прямо сейчас и {{item.date}} включительно.</p>
+                    <p>Купон дает право скидки 64% на 2 часа игры в боулинг в клубе «Боулинг Измайлово». Вы заплатите:</p>
+                    <li>850 р. вместо 2380 р. за 2 часа игры в боулинг.</li>
+                    <h4>Дополнительные условия:</h4>
+                    
+                        <li>Необходима предварительная бронь дорожек по телефону (с указанием номера купона).</li>
+                        <li>Предъявляйте распечатанный купон на месте.</li>
+                        <li>Количество дорожек ограничено.</li>
+                    
+                    <h4>Как работает купон:</h4>
+                </div>
+            </div>
+
+        </div>
+        <br>
+    </div>
+</div>
