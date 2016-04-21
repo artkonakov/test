@@ -10,9 +10,6 @@
 angular.module('cupon2App')
   .controller('MainCtrl', ['$scope', '$routeParams', '$http',
   function ($scope, $routeParams, $http) {
-            $http.get('testitem.json').success(function (data) {
-                $scope.item = data;
-            });
 
             var req = {
              method: 'GET',
@@ -24,5 +21,6 @@ angular.module('cupon2App')
            };
            $http(req).success(function (data) {
              console.log(data);
+             $scope.items = data.data;
            });
   }]);

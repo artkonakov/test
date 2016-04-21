@@ -1,14 +1,16 @@
 <div class="row">
-    <div ng-repeat="n in [42, 42, 43, 43,44,45,46] track by $index" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
+
+    <div ng-repeat="item in items" class="col-lg-3 col-md-4 col-sm-6 col-xs-12 ">
         <div class="main-item">
-            <img ng-src="{{item.image}}">
+            <img ng-src="{{item.img}}">
             <div class="text-wraper">
                 <h1>{{item.header}}</h1>
                 <p>{{item.description}}</p>
+
             </div>
             <div class="controls">
                 <div class="left-block">
-                    <p>{{item.date}}</p>
+                    <p>{{item.expires}}</p>
                 </div>
                 <div class="right-block">
                     <a href="#/testitem" class="btn btn-success btn-sm">Купон</a>
