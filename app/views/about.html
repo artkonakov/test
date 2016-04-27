@@ -14,17 +14,21 @@
                 </div>
             </div>
             <div class="item-form">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Номер телефона</label>
-                        <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="891295123456" ng-model="usertel" required>
-                    </div>
-
-                    <button type="submit" class="btn btn-success" ng-click="send(usertel)">Получить купон</button>
-                </form>
-
+            <form name="userForm" ng-submit="submitForm()" ng-show="!formsended" novalidate>
+                <div class="input-group">
+                  <span class="input-group-addon" id="sizing-addon1">+7</span>
+                  <input type="tel" class="form-control" placeholder="Номер телефона" ng-model="usertel" ng-minlength="10" ng-maxlength="10" required>
+                        <span class="input-group-btn">
+                <button type="submit" class="btn btn-success" ng-disabled="userForm.$invalid" class="btn btn-success" type="button">Получить</button>
+                </span>
+              </div>
+            </form>
+            <div ng-show="formsended">
+              <P>{{ statusMsg }}<p>
             </div>
-        </div>
+            </div>
+          </div>
+
 
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 ">

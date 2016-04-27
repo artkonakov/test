@@ -73,3 +73,11 @@ br {
     /* font-size: 18px; */
     /* line-height: 20px; */
 }
+.ng-enter {
+  transition: 1s easy all;
+  opacity:1;
+}
+.ng-enter-active {
+  transition: 1s linear all;
+  opacity:0;
+}

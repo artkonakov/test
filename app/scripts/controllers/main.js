@@ -23,4 +23,6 @@ angular.module('cupon2App')
              console.log(data);
              $scope.items = data.data;
            });
+           
+
   }]);
