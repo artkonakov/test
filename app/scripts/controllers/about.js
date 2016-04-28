@@ -42,7 +42,6 @@ angular.module('cupon2App')
               if (!localStorage.getItem(currentitem)) {
                 localStorage.setItem(currentitem, 1);
                 $http.get($scope.url).success(function (data) {
-                console.log(data);
                 $scope.formsended = true;
                 });
               } else if (parseInt(localStorage.getItem(currentitem)) >= 5) {
@@ -54,16 +53,12 @@ angular.module('cupon2App')
 
                 localStorage.setItem(currentitem, counting);
                 $http.get($scope.url).success(function (data) {
-                console.log(data);
-                $scope.formsended = true;
+                  $scope.formsended = true;
+                  console.log(data, $scope.url);
                 });
 
               };
-
-
-
-
-
+              //Отрпавляю данные на сервер - сохраняю номер телефона отправителя и название купона
                 var req2 = {
                    method: 'POST',
                    url: 'https://api.backendless.com/v1/data/phones',
@@ -77,11 +72,9 @@ angular.module('cupon2App')
                 };
 
                  $http(req2).success(function (data) {
-                   console.log(data);
-
 
                  });
-                  console.log($scope.url);
+
             };
               $scope.formsended = true;
           };

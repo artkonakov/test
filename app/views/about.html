@@ -17,7 +17,7 @@
             <form name="userForm" ng-submit="submitForm()" ng-show="!formsended" novalidate>
                 <div class="input-group">
                   <span class="input-group-addon" id="sizing-addon1">+7</span>
-                  <input type="tel" class="form-control" placeholder="Номер телефона" ng-model="usertel" ng-minlength="10" ng-maxlength="10" required>
+                  <input type="tel" class="form-control" pattern="[9]{1}[0-9]{9}" placeholder="Номер телефона" ng-model="usertel" ng-minlength="10" ng-maxlength="10" required>
                         <span class="input-group-btn">
                 <button type="submit" class="btn btn-success" ng-disabled="userForm.$invalid" class="btn btn-success" type="button">Получить</button>
                 </span>

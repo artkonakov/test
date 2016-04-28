@@ -10,7 +10,7 @@
 angular.module('cupon2App')
   .controller('MainCtrl', ['$scope', '$routeParams', '$http',
   function ($scope, $routeParams, $http) {
-
+            $scope.items = {};
             var req = {
              method: 'GET',
              url: 'https://api.backendless.com/v1/data/items',
@@ -23,6 +23,18 @@ angular.module('cupon2App')
              console.log(data);
              $scope.items = data.data;
            });
-           
+
+           //Сравнение даты для отображения элементов
+           $scope.todayDate = new Date();
+           $scope.comparingDate = function (e) {
+             if ( parseInt($scope.todayDate.getTime()) <= e ) {
+              return true;
+            } else {
+                return false;
+            };
+           };
+
+
+
 
   }]);
